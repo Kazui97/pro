@@ -4,7 +4,9 @@ using UnityEngine;
 
 public class PlataformaMov : MonoBehaviour
 {
-   public int cambio;
+    public int cambio;
+    public GameObject cubo;
+
     void Start()
     {
         StartCoroutine(Mover());
@@ -48,5 +50,6 @@ public class PlataformaMov : MonoBehaviour
     void Update()
     {
         Estados();
+        cubo.transform.position = new Vector3(transform.position.x, cubo.transform.position.y, transform.position.z);
     }
 }
